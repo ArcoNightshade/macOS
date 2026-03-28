@@ -3,7 +3,7 @@ This is my personal Nix flake I use on my macbook.
 ## Requirements:
 
 - Relatively modern MacOS version
-- Nix or Lix (Recommended) installed: https://lix.systems/install/
+- Lix installed: https://lix.systems/install/
 - Nix-Darwin installed: https://github.com/LnL7/nix-darwin#install
 
 ## Quickstart:
