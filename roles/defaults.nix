@@ -76,7 +76,7 @@
   environment.systemPackages = with pkgs; [
     aircrack-ng
     btop
-    cava
+    # cava  # currently broken on nixpkgs-unstable
     cheat
     curl
     elixir
