@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  home.stateVersion = "25.11";
+  home.stateVersion = "24.11";
   programs.firefox = {
     enable = true;
     # Handled by the Homebrew module
@@ -15,7 +15,7 @@
         darkreader
         firenvim
         gnome-shell-integration
-        okta-browser-plugin
+
         privacy-badger
         private-relay
         redirector
