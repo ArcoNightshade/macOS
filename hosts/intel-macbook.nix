@@ -1,5 +1,5 @@
 # Remember that this is used for GitHub Actions to test builds
-{ config, pkgs, lib, home-manager, nur, ... }:
+{ config, pkgs, lib, home-manager, ... }:
 
 let
   hostname = "nix-mac-mini";

@@ -9,10 +9,9 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nur.url = "github:nix-community/NUR";
   };
 
-  outputs = inputs@{ self, nixpkgs, darwin, home-manager, nur, ... }: {
+  outputs = inputs@{ self, nixpkgs, darwin, home-manager, ... }: {
     darwinConfigurations = {
       # m3-macbook-air (lyon)
       "workstation" = darwin.lib.darwinSystem {
