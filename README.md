@@ -1,4 +1,5 @@
 This is my personal Nix flake I use on my macbook.
+Not really intended for anybody else to use.
 
 ## Requirements:
 
