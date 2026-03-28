@@ -14,11 +14,11 @@
 
   outputs = inputs@{ self, nixpkgs, darwin, home-manager, nur, ... }: {
     darwinConfigurations = {
-      # m1-macbook 
-      "m2-macbook-air" = darwin.lib.darwinSystem {
+      # m3-macbook-air (lyon)
+      "workstation" = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
         specialArgs = inputs;
-        modules = [ ./hosts/m2-macbook-air.nix ];
+        modules = [ ./hosts/m3-macbook-air.nix ];
       };
       # intel-macbook (used for CI to test updates)
       "intel-macbook" = darwin.lib.darwinSystem {

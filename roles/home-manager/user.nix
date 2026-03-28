@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  home.stateVersion = "23.05";
+  home.stateVersion = "25.11";
   programs.firefox = {
     enable = true;
     # Handled by the Homebrew module
@@ -21,7 +21,7 @@
         redirector
         ublock-origin
         vimium
-      ]; 
+      ];
       userChrome = ''
         /* * Do not remove the @namespace line -- it's required for correct functioning */
         /* set default namespace to XUL */
@@ -39,12 +39,12 @@
         .titlebar-spacer {
 	    display: none !important;
         }
-      
-        /* Remove import bookmarks button */ 
+
+        /* Remove import bookmarks button */
         #import-button {
           display: none;
-        } 
-        
+        }
+
         /* Remove bookmark toolbar */
         toolbarbutton.bookmark-item:not(.subviewbutton) {
           display: none;
@@ -63,7 +63,7 @@
         /* Hide Firefox tab icon */
         .tab-icon-image {
           display: none;
-        } 
+        }
       '';
       isDefault = true;
       name = "default";
@@ -120,6 +120,6 @@
         "toolkit.telemetry.updatePing.enabled" = false;
       };
     };
-  }; 
+  };
   # End Firefox config
 }

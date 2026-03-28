@@ -6,10 +6,9 @@ let
   username = "lyon";
 in {
   imports = [
-    ../roles/m1.nix
+    ../roles/m3.nix
     ../roles/defaults.nix
     ../roles/brew.nix
-    ../roles/yabai.nix
     ../roles/network.nix
     ../roles/home-manager/settings.nix
   ];
