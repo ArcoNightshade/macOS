@@ -5,14 +5,19 @@
   nix.package = pkgs.nix;
   nixpkgs.config.allowUnfree = true;
 
-  services.activate-system.enable = true;
-  services.nix-daemon.enable = true;
   programs.nix-index.enable = true;
 
+  ids.gids.nixbld = 350;
+
   # add nerd fonts
-  fonts.fonts = with pkgs; [
-    (nerdfonts.override { fonts = [ "Hack" "DroidSansMono" "Iosevka" ]; })
+  fonts.packages = with pkgs; [
+    nerd-fonts.hack
+    nerd-fonts.droid-sans-mono
+    nerd-fonts.iosevka
   ];
+
+  # Set primary user for system defaults
+  system.primaryUser = "lyon";
 
   #system-defaults.nix
   system.keyboard = {
@@ -42,12 +47,6 @@
       TrackpadThreeFingerDrag = true;
       Dragging = true;
     };
-    # Apple firewall config: block all incoming connections and enable stealth mode
-    alf = {
-      globalstate = 2;
-      loggingenabled = 0;
-      stealthenabled = 1;
-    };
     loginwindow = {
       GuestEnabled = false;
       DisableConsoleAccess = true;
@@ -67,7 +66,13 @@
       _HIHideMenuBar = true; # autohide top panel
     };
   };
-   # Add flake support 
+
+  # Firewall
+  networking.applicationFirewall.enable = true;
+  networking.applicationFirewall.blockAllIncoming = true;
+  networking.applicationFirewall.enableStealthMode = true;
+
+   # Add flake support
   nix.extraOptions = ''
     experimental-features = nix-command flakes
   '';
