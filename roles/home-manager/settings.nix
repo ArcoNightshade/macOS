@@ -8,6 +8,6 @@
 
   # Import nur as nixpkgs.overlays
   nixpkgs.overlays = [ 
-    nur.overlay 
+    nur.overlays.default
   ];
 }

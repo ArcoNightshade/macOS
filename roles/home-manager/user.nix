@@ -2,6 +2,7 @@
 
 {
   home.stateVersion = "24.11";
+  home.homeDirectory = "/Users/lyon";
   programs.firefox = {
     enable = true;
     # Handled by the Homebrew module
@@ -10,7 +11,7 @@
     profiles.default = {
       search.force = true; # This is required so the build won't fail each time
       # View extensions here: https://github.com/nix-community/nur-combined/blob/master/repos/rycee/pkgs/firefox-addons/generated-firefox-addons.nix
-      extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+      extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
         bitwarden
         darkreader
         firenvim
