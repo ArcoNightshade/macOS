@@ -72,6 +72,45 @@
   networking.applicationFirewall.blockAllIncoming = true;
   networking.applicationFirewall.enableStealthMode = true;
 
+  # CLI tools (moved from brew)
+  environment.systemPackages = with pkgs; [
+    aircrack-ng
+    btop
+    cava
+    cheat
+    curl
+    elixir
+    erlang
+    fastfetch
+    ffmpeg
+    fzf
+    gcc
+    gh
+    git
+    hashcat
+    john
+    lld
+    llvm
+    lua
+    mas
+    nmap
+    nodejs
+    nushell
+    odin
+    onefetch
+    openjdk
+    python3
+    qemu
+    raylib
+    rustup
+    _7zz
+    signal-cli
+    stow
+    tokei
+    uutils-coreutils
+    zsh
+  ];
+
    # Add flake support
   nix.extraOptions = ''
     experimental-features = nix-command flakes
