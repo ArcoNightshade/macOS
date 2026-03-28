@@ -1,9 +1,9 @@
 { config, pkgs, ... }:
 
 {
-  description = "Spencer Heywood";
-  name = "Spencer Heywood";
-  shell = pkgs.bash;
+  description = "Lyon";
+  name = "lyon";
+  shell = pkgs.nushell;
   # These packages will only be installed for your user
   # The binaries will be available in the following path: /etc/profiles/per-user/$USER/bin
   packages = [

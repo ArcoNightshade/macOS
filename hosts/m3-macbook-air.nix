@@ -2,8 +2,8 @@
 
 
 let
-  hostname = "nix-macbook-air";
-  username = "heywoodlh";
+  hostname = "RTS";
+  username = "lyon";
 in {
   imports = [
     ../roles/m1.nix
@@ -21,9 +21,6 @@ in {
 
   # Set hostname
   networking.hostName = "${hostname}";
-
-  # Always show menu bar on M2 Macbook Air 
-  system.defaults.NSGlobalDomain._HIHideMenuBar = lib.mkForce false;
 
   system.stateVersion = 4;
 }
