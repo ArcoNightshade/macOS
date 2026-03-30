@@ -32,7 +32,6 @@
       "github"
       "signal"
       "vscodium"
-      "docker-desktop"
       "libreoffice"
       "tidal"
       "zed"

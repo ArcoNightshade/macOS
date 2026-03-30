@@ -51,7 +51,7 @@
       GuestEnabled = false;
       DisableConsoleAccess = true;
     };
-    SoftwareUpdate.AutomaticallyInstallMacOSUpdates = true;
+    SoftwareUpdate.AutomaticallyInstallMacOSUpdates = false;
     NSGlobalDomain = {
       AppleInterfaceStyle = "Dark"; # set dark mode
       AppleKeyboardUIMode = 3;
@@ -63,7 +63,7 @@
       NSAutomaticSpellingCorrectionEnabled = false;
       NSNavPanelExpandedStateForSaveMode = true;
       NSNavPanelExpandedStateForSaveMode2 = true;
-      _HIHideMenuBar = true; # autohide top panel
+      _HIHideMenuBar = false; # autohide top panel
     };
   };
 
@@ -106,8 +106,8 @@
     signal-cli
     stow
     tokei
-    uutils-coreutils
     zsh
+    lazygit
   ];
 
    # Add flake support
