@@ -6,7 +6,15 @@
     package = pkgs.zed-editor;
 
     ## This populates the userSettings "auto_install_extensions"
-    extensions = ["nix" "toml" "elixir" "make" "haskell" "assembly" "latex" ];
+    extensions = [
+      "nix"
+      "toml"
+      "elixir"
+      "make"
+      "haskell"
+      "assembly"
+      "latex"
+    ];
 
     ## everything inside of these brackets are Zed options.
     userSettings = {
@@ -27,7 +35,12 @@
         dock = "bottom";
         detect_venv = {
           on = {
-            directories = [".env" "env" ".venv" "venv"];
+            directories = [
+              ".env"
+              "env"
+              ".venv"
+              "venv"
+            ];
             activate_script = "default";
           };
         };
@@ -75,7 +88,7 @@
       };
       show_whitespaces = "all";
       ui_font_size = 16;
-      buffer_font_size = 16;
+      buffer_font_size = 14;
     };
   };
 }
