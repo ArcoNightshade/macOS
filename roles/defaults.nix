@@ -108,6 +108,8 @@
     tokei
     zsh
     lazygit
+    nixd
+    nil
   ];
 
    # Add flake support

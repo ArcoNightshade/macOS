@@ -11,6 +11,7 @@ in {
     ../roles/brew.nix
     ../roles/network.nix
     ../roles/home-manager/settings.nix
+    ../roles/home-manager/zed.nix
   ];
   # Define user settings
   users.users.${username} = import ../roles/user.nix { inherit config; inherit pkgs; };
