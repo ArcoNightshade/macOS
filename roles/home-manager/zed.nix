@@ -47,8 +47,11 @@
         env = {
           TERM = "foot";
         };
-        font_family = "FiraCode Nerd Font";
-        font_features = null;
+        font_family = "FiraCode Nerd Font Mono";
+        font_features = {
+          calt = true;
+          liga = true;
+        };
         font_size = null;
         line_height = "comfortable";
         option_as_meta = false;
@@ -85,6 +88,11 @@
         mode = "system";
         light = "One Light";
         dark = "Catppuccin Espresso (Blur) [Heavy]";
+      };
+      buffer_font_family = "FiraCode Nerd Font Mono";
+      buffer_font_features = {
+        calt = true;
+        liga = true;
       };
       show_whitespaces = "all";
       ui_font_size = 16;

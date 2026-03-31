@@ -14,6 +14,8 @@
     nerd-fonts.hack
     nerd-fonts.droid-sans-mono
     nerd-fonts.iosevka
+    nerd-fonts.fira-code
+    nerd-fonts.jetbrains-mono
   ];
 
   # Set primary user for system defaults
@@ -112,7 +114,7 @@
     nil
   ];
 
-   # Add flake support
+  # Add flake support
   nix.extraOptions = ''
     experimental-features = nix-command flakes
   '';

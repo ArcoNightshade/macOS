@@ -35,6 +35,7 @@
       "libreoffice"
       "tidal"
       "zed"
+      "docker-desktop"
       "claude-code"
       "firefox"
       "obsidian"
