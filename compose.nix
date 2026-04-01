@@ -39,6 +39,7 @@
   };
 
   # Home Manager
+  home-manager.backupFileExtension = "bak";
   home-manager.useGlobalPkgs = true;
   home-manager.users.${settings.account.name} = {
     home.stateVersion = "24.11";
