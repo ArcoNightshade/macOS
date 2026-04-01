@@ -7,7 +7,7 @@
 ## Structure
 
 ```
-.lyon/
+.macOS/
 ├── flake.nix                   # Inputs, outputs, profiles
 ├── compose.nix                 # Shared config across all profiles
 ├── profile/

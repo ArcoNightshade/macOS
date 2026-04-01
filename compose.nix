@@ -1,8 +1,13 @@
-{ pkgs, settings, lib, ... }:
+{
+  pkgs,
+  settings,
+  lib,
+  ...
+}:
 
 {
   # Nix settings
-  nix.package = pkgs.nix;
+  nix.package = pkgs.lix;
   nix.extraOptions = "experimental-features = nix-command flakes";
   nix.settings = {
     trusted-users = [ "@admin" ];
@@ -49,7 +54,11 @@
   };
 
   # Networking
-  networking.knownNetworkServices = [ "Wi-Fi" "Bluetooth PAN" "Thunderbolt Bridge" ];
+  networking.knownNetworkServices = [
+    "Wi-Fi"
+    "Bluetooth PAN"
+    "Thunderbolt Bridge"
+  ];
 
   system.stateVersion = 4;
 }
