@@ -7,12 +7,19 @@
 
 {
   # Nix settings
-  nix.package = pkgs.lix;
-  nix.extraOptions = "experimental-features = nix-command flakes";
+nix.extraOptions = ''
+    experimental-features = nix-command flakes
+    download-buffer-size = 524288000
+  '';
   nix.settings = {
     trusted-users = [ "@admin" ];
     allowed-users = [ settings.account.name ];
+    warn-dirty = false;
+    auto-optimise-store = true;
   };
+
+  nix.optimise.automatic = true;
+  nix.optimise.interval = [ { Weekday = 5; } ]; # weekly, Friday
 
   nixpkgs.config.allowUnfree = true;
   programs.nix-index.enable = true;

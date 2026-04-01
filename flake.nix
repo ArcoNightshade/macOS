@@ -9,9 +9,13 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    lix-module = {
+      url = "https://git.lix.systems/lix-project/nixos-module/archive/2.93.3.tar.gz";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs@{ self, nixpkgs, darwin, home-manager, ... }:
+  outputs = inputs@{ self, nixpkgs, darwin, home-manager, lix-module, ... }:
     let
       settings = {
         timeZone = "America/New_York";
@@ -25,6 +29,7 @@
           system = "aarch64-darwin";
           specialArgs = { inherit inputs settings; };
           modules = [
+            lix-module.nixosModules.default
             home-manager.darwinModules.home-manager
             ./profile/m3-macbook-air/hardware.nix
             ./profile/m3-macbook-air/configuration.nix
@@ -36,6 +41,7 @@
           system = "x86_64-darwin";
           specialArgs = { inherit inputs settings; };
           modules = [
+            lix-module.nixosModules.default
             home-manager.darwinModules.home-manager
             ./profile/intel-macbook/hardware.nix
             ./profile/intel-macbook/configuration.nix
