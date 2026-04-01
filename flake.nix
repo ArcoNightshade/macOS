@@ -25,6 +25,7 @@
           system = "aarch64-darwin";
           specialArgs = { inherit inputs settings; };
           modules = [
+            home-manager.darwinModules.home-manager
             ./profile/m3-macbook-air/hardware.nix
             ./profile/m3-macbook-air/configuration.nix
             ./compose.nix
@@ -35,6 +36,7 @@
           system = "x86_64-darwin";
           specialArgs = { inherit inputs settings; };
           modules = [
+            home-manager.darwinModules.home-manager
             ./profile/intel-macbook/hardware.nix
             ./profile/intel-macbook/configuration.nix
             ./compose.nix

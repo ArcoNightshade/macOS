@@ -1,10 +1,6 @@
-{ pkgs, settings, home-manager, lib, ... }:
+{ pkgs, settings, lib, ... }:
 
 {
-  imports = [
-    home-manager.darwinModules.home-manager
-  ];
-
   # Nix settings
   nix.package = pkgs.nix;
   nix.extraOptions = "experimental-features = nix-command flakes";
