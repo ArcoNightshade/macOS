@@ -7,10 +7,7 @@
 
 {
   # Nix settings
-nix.extraOptions = ''
-    experimental-features = nix-command flakes
-    download-buffer-size = 524288000
-  '';
+  nix.extraOptions = "experimental-features = nix-command flakes";
   nix.settings = {
     trusted-users = [ "@admin" ];
     allowed-users = [ settings.account.name ];
